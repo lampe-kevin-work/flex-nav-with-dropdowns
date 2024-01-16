@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox NavBar</title>
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+body {
+  position: relative;
+  background: url("./image/fire.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+h1 {
+  text-align: center;
+  height: 10vh;
+  padding-top: 3vh;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+.navbar {
+  display: flex;
+  text-align: center;
+}
+.home {
+  width: 25vw;
+  z-index: 1;
+}
+.homeBtn {
+  background: black;
+  color: white;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  border: 1px solid black;
+  height: 5vh;
+}
+.homeContent {
+  background: black;
+  color: white;
+  display: none;
+  border: 1px solid black;
+  padding-top: 1vh;
+  padding-bottom: 1vh ;
+}
+.home:hover .homeContent {
+  display: block;
+}
+.products {
+  width: 25vw;
+  z-index: 1;
+}
+.productsBtn {
+  background: black;
+  color: white;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  border: 1px solid black;
+  height: 5vh;
+}
+.productsContent {
+  background: black;
+  color: white;
+  display: none;
+  border: 1px solid black;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+.products:hover .productsContent {
+  display: block;
+}
+.services {
+  width: 25vw;
+  z-index: 1;
+}
+.servicesBtn {
+  background: black;
+  color: white;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  border: 1px solid black;
+  height: 5vh;
+}
+.servicesContent {
+  background: black;
+  color: white;
+  display: none;
+  border: 1px solid black;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+.services:hover .servicesContent {
+  display: block;
+}
+.contacts {
+  width: 25vw;
+  z-index: 1;
+}
+.contactsBtn {
+  background: black;
+  color: white;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  border: 1px solid black;
+  height: 5vh;
+}
+.contactsContent {
+  background: black;
+  color: white;
+  display: none;
+  border: 1px solid black;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  z-index: 1;
+}
+.contacts:hover .contactsContent {
+  display: block;
+}
+.content {
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+.main {
+  height: 85vh;
+  display: flex;
+  position: absolute;
+  top: 15vh;
+}
+.leftSpace {
+  width: 20vw;
+  height: 85vh;
+  background: rgba(0, 0, 0, 0.5);
+  border-right: 3px solid black;
+}
+.mainMain {
+  color: white;
+  font-weigth: bold;
+  display: flex;
+}
+.leftMain {
+  height: 85vh;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mainContent {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 7vh 7vw;
+  margin-left: 1vw;
+}
+.middleContent {
+  font-size: 2em;
+  padding-left: 1vw;
+}
+.mainBtns {
+  display: flex;
+  justify-content: flex-end;
+}
+.signInBtn {
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  border-radius: 5%;
+  padding: 1vh 1vw;
+  text-decoration: none;
+  color: white;
+}
+.orderBtn {
+  padding: 1vh 1vw;
+  border: 3px solid rgba(0, 0, 0, 0);
+  text-decoration: none;
+  color: white;
+}
+.rightMain {
+  height: 85vh;
+  width: 20vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.rightContent {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 2vh 2vw;
+  text-decoration: none;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h1>Flexbox NavBar</h1>
+
+<div class="navbar">
+	<div class="home">
+		<div class="homeBtn">Home</div>
+		<div class="homeContent">
+			<div class="content">News</div>
+			<div class="content">Festivals</div>
+			<div class="content">Social</div>
+		</div>
+	</div>
+	<div class="products">
+		<div class="productsBtn">Products</div>
+		<div class="productsContent">
+			<div class="content">Cars</div>
+			<div class="content">Motorcycles</div>
+			<div class="content">Buses</div>
+		</div>
+	</div>
+	<div class="services">
+		<div class="servicesBtn">Services</div>
+		<div class="servicesContent">
+			<div class="content">Wash</div>
+			<div class="content">Info</div>
+			<div class="content">Repair</div>
+		</div>
+	</div>
+	<div class="contacts">
+		<div class="contactsBtn">Contacs</div>
+		<div class="contactsContent">
+			<div class="content">Sign In</div>
+			<div class="content">Adress</div>
+			<div class="content">Feedback</div>
+		</div>
+	</div>
+</div>
+
+<div class="main">
+	<div class="leftSpace"></div>
+	<div class="mainMain">
+		<div class="leftMain">
+			<div class="mainContent">
+				<div class="middleContent">Place to<br>keep calm<br>dreamly</div>
+				<div class="mainBtns">
+					<a class="signInBtn" href="#">Sign In</a>
+					<a class="orderBtn" href="#">Order</a>
+				</div>
+			</div>
+		</div>
+		<div class="rightMain">
+			<a class="rightContent" href="#">Certificated</a>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
